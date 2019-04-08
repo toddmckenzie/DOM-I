@@ -57,10 +57,41 @@ domIsAwesome.style.height = "220px";
 domIsAwesome.style.width = "170px"
 domIsAwesome.style.marginRight = "60px";
 
-document.querySelector('.text-content h4').innerHTML = siteContent["main-content"]["features-h4"];
-document.querySelector('.text-content p').innerHTML = siteContent["main-content"]["features-content"];
 
-document.querySelector('.text-content h4').innerHTML = siteContent["main-content"]["about-h4"];
-document.querySelector('.text-content p').innerHTML = siteContent["main-content"]["about-content"];
+let multipleTextTopH4 = document.querySelectorAll('.text-content h4');
+let multipleTextTopP = document.querySelectorAll('.text-content p');
+multipleTextTopH4[0].innerHTML = siteContent["main-content"]["features-h4"];
+multipleTextTopP[0].innerHTML = siteContent["main-content"]["features-content"];
+
+multipleTextTopH4[1].innerHTML = siteContent["main-content"]["about-h4"];
+multipleTextTopP[1].innerHTML = siteContent["main-content"]["about-content"];
 
 document.querySelector('.middle-img').src = siteContent["main-content"]["middle-img-src"];
+
+
+let multipleBottomH4 = document.querySelectorAll('.bottom-content .text-content h4');
+let multipleBottomP = document.querySelectorAll('.bottom-content .text-content p');
+
+
+multipleBottomH4[0].innerHTML = siteContent["main-content"]["services-h4"];
+multipleBottomH4[1].innerHTML = siteContent["main-content"]["product-h4"];
+multipleBottomH4[2].innerHTML = siteContent["main-content"]["vision-h4"];
+
+
+
+multipleBottomP[0].innerHTML = siteContent["main-content"]["services-content"];
+multipleBottomP[1].innerHTML = siteContent["main-content"]["product-content"];
+multipleBottomP[2].innerHTML = siteContent["main-content"]["vision-content"];
+
+document.querySelector('.contact h4').innerHTML = siteContent["contact"]["contact-h4"];
+let multipleContactPs = document.querySelectorAll('.contact p');
+
+let newAddress = [];
+siteContent["contact"]["address"].split(' ').map(item => (item === "Street")?newAddress.push(item + '<br>'): newAddress.push(item));
+//multipleContactPs[0].innerHTML = siteContent["contact"]["address"];
+multipleContactPs[0].innerHTML = newAddress.join(' ');
+multipleContactPs[1].innerHTML = siteContent["contact"]["phone"];
+multipleContactPs[2].innerHTML = siteContent["contact"]["email"];
+
+
+document.querySelector('footer p').innerHTML = siteContent["footer"]["copyright"];
