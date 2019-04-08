@@ -46,3 +46,13 @@ acrossImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let navigation = document.querySelectorAll('nav a');
 navigation.forEach((item, index) => item.innerHTML = siteContent["nav"][`nav-item-${index + 1}`]);
+
+let domIsAwesome = document.querySelector('.cta-text h1');
+domIsAwesome.innerHTML = siteContent['cta']['h1'];
+
+let buttons = document.querySelector('button');
+buttons.innerHTML = siteContent['cta']['button'];
+
+domIsAwesome.style.height = "220px";
+domIsAwesome.style.width = "170px"
+domIsAwesome.style.marginRight = "60px";
