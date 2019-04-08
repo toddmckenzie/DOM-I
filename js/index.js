@@ -95,3 +95,16 @@ multipleContactPs[2].innerHTML = siteContent["contact"]["email"];
 
 
 document.querySelector('footer p').innerHTML = siteContent["footer"]["copyright"];
+
+//let navigationColor = document.querySelectorAll('nav a');
+//navigationColor.forEach(item => item.style.color = "green");
+
+let navigations = document.querySelector('nav');
+let anchors = document.createElement('a');
+let before = navigations.prepend(anchors);
+let after = navigations.appendChild(anchors);
+//before.innerHTML = "Before";
+after.innerHTML = "After";
+
+let navigationColor = document.querySelectorAll('nav a');
+navigationColor.forEach(item => item.style.color = "green");
