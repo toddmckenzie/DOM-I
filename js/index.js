@@ -99,12 +99,23 @@ document.querySelector('footer p').innerHTML = siteContent["footer"]["copyright"
 //let navigationColor = document.querySelectorAll('nav a');
 //navigationColor.forEach(item => item.style.color = "green");
 
-let navigations = document.querySelector('nav');
-let anchors = document.createElement('a');
-let before = navigations.prepend(anchors);
-let after = navigations.appendChild(anchors);
+let navigations = document.querySelector('header nav');
+//let navigations2 = document.querySelector('header nav');
+let beforeAnchor = document.createElement('a');
+let afterAnchor = document.createElement('a');
+//let anchors2 = document.createElement('a');
+//let before = navigations2.prepend(anchors2);
+//let after = navigations.appendChild(anchors);
+
 //before.innerHTML = "Before";
-after.innerHTML = "After";
+//after.innerHTML = "After";
+
+beforeAnchor.textContent = "Before";
+afterAnchor.textContent = "After";
+beforeAnchor.href = "#";
+afterAnchor.href = "#";
+navigations.prepend(beforeAnchor);
+navigations.appendChild(afterAnchor);
 
 let navigationColor = document.querySelectorAll('nav a');
 navigationColor.forEach(item => item.style.color = "green");
